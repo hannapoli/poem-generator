@@ -1,4 +1,5 @@
 let jokeBtnElement = document.querySelector("#joke-btn");
+let key;
 
 const displayAnswer = (response) => {
 
@@ -15,7 +16,6 @@ const makeApiCall = (event) => {
 
     let jokeText = document.querySelector("#joke-text");
     jokeText.innerHTML = "Generating a joke...";
-
     let context =
         "You are a comedian who tells funny jokes. Don't repeat your answers.";
     let prompt = "Generate a unique funny joke about animals.";
