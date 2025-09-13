@@ -7,7 +7,7 @@ body {
     margin: 2rem;
 }
 
-button {
+#poem-btn {
     cursor: pointer;
     padding: 8px;
     margin: 8px;

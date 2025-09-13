@@ -4,8 +4,8 @@ exports.handler = async function (event, context) {
     const API_KEY = process.env.key;
 
     const contextText =
-        "You are a comedian who tells funny jokes. Don't repeat your answers.";
-    const prompt = "Generate a unique funny joke about animals.";
+        "You are knowledgeable about all kinds of poems.";
+    const prompt = "Generate a poem on the proposed topic";
     const url = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(prompt)}&context=${encodeURIComponent(contextText)}&key=${API_KEY}`;
 
     try {
@@ -19,7 +19,7 @@ exports.handler = async function (event, context) {
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Failed to fetch joke", details: error.message }),
+      body: JSON.stringify({ error: "Failed to fetch the poem", details: error.message }),
     };
   }
 }

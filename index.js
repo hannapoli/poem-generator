@@ -1,8 +1,8 @@
-let jokeBtnElement = document.querySelector("#joke-btn");
+let poemBtnElement = document.querySelector("#poem-btn");
 
 const displayAnswer = (response) => {
 
-    new Typewriter("#joke-text", {
+    new Typewriter("#poem-text", {
         strings: response.data.answer,
         autoStart: true,
         cursor: "",
@@ -13,8 +13,8 @@ const displayAnswer = (response) => {
 const makeApiCall = (event) => {
     event.preventDefault();
 
-    let jokeText = document.querySelector("#joke-text");
-    jokeText.innerHTML = "Generating a joke...";
+    let poemText = document.querySelector("#poem-text");
+    poemText.innerHTML = "Generating a poem...";
     
     axios
         .get("/.netlify/functions/get-poem")
@@ -24,4 +24,4 @@ const makeApiCall = (event) => {
         });
 };
 
-jokeBtnElement.addEventListener("click", makeApiCall);
+poemBtnElement.addEventListener("click", makeApiCall);

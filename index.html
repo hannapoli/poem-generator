@@ -11,10 +11,26 @@
 </head>
 
 <body>
-    <div>
-        <button id="joke-btn">Tell me a joke</button>
-        <h2 name="text" id="joke-text"></h2>
-    </div>
+    <header>
+        <h1>AI Poem generator</h1>
+    </header>
+    <main>
+        <form>
+            <input type="text" placeholder="Enter the topic of the poem..." autofocus required autocomplete="off" />
+            <input type="submit" id="poem-btn">
+        </form>
+        <div>
+            <h2 name="text" id="poem-text"></h2>
+        </div>
+    </main>
+    <footer>
+        <p>
+            This project was coded by
+            <a href="https://github.com/hannapoli" target="_blank">Hanna Polishchuk</a>. It is open-sourced
+            <a href="https://github.com/hannapoli/poem-generator" target="_blank"> on GitHub</a> and
+            <a href="https://ai-poem-generator-hanna.netlify.app" target="_blank">hosted on Netlify</a>.
+        </p>
+    </footer>
 </body>
 <script src="./index.js"></script>
 
