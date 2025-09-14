@@ -17,8 +17,10 @@ const makeApiCall = (event) => {
     poemText.classList.remove("hidden");
     poemText.innerHTML = `<div class="pending">Generating a poem... ⏳</div>`;
 
+    const promptInstructions = document.querySelector("#instructions").value;
+
     axios
-        .get("/.netlify/functions/get-poem")
+        .post("/.netlify/functions/get-poem", { promptInstructions })
         .then(displayAnswer)
         .catch((error) => {
             console.error(`Error fetching data:`, error);
