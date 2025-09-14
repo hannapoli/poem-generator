@@ -69,7 +69,7 @@ form {
 }
 
 .generated-poem {
-    font-size: 16px;
+    font-size: 17px;
     background-color: white;
     padding: 20px;
     line-height: 2;
@@ -78,8 +78,32 @@ form {
     border-radius: 10px;
 }
 
+.generated-poem strong {
+    color: #a03812;
+}
+
+.hidden {
+    display: none;
+}
+
 footer {
     text-align: center;
     font-size: 13px;
     margin-top: 40px;
+}
+
+.pending {
+    animation: blink-animation 1.5s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
 }

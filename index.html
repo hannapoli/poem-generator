@@ -21,17 +21,12 @@
             <h1>AI Poem Generator</h1>
         </header>
         <main>
-            <form>
-                <input type="text" class="prompt-field" placeholder="Enter the topic of the poem..." autofocus required
-                    autocomplete="off" />
+            <form id="poem-form">
+                <input type="text" class="prompt-field" id="instructions"
+                    placeholder="Enter the topic of a poem to be generated..." autofocus required autocomplete="off" />
                 <input type="submit" class="submit-btn" id="poem-btn">
             </form>
-            <div>
-                <p name="text" class="generated-poem" id="poem-text">
-                    The poem <br />
-                    will appear here...
-                </p>
-            </div>
+            <div class="generated-poem hidden" id="poem-text"></div>
         </main>
         <footer>
             <p>
@@ -44,5 +39,6 @@
     </div>
 </body>
 <script src="./index.js"></script>
+<script src="./netlify/functions/get-poem.js"></script>
 
 </html>

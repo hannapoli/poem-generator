@@ -1,14 +1,15 @@
 //This function runs when API is called 
 exports.handler = async function (event, context) {
 
-    const API_KEY = process.env.key;
+  const API_KEY = process.env.key;
 
-    const contextText =
-        "You are knowledgeable about all kinds of poems.";
-    const prompt = "Generate a poem on the proposed topic";
-    const url = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(prompt)}&context=${encodeURIComponent(contextText)}&key=${API_KEY}`;
+  const promptInstructions = document.querySelector("#instructions");
+  const contextText =
+    "You are an expert in writing short poems. You must generate a 4-line poem using basic HTML, separating each line with a <br /> tag. Do not include a title to the poem. At the end of the poem (not at the beginning), sign it with 'SheCodes AI' inside a <strong> element. Be sure to follow the user instructions!";
+  const prompt = `User instructions: generate a poem on the following topic: ${promptInstructions.value}`;
+  const url = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(prompt)}&context=${encodeURIComponent(contextText)}&key=${API_KEY}`;
 
-    try {
+  try {
     const response = await fetch(url);
     const data = await response.json();
 

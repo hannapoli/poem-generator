@@ -1,4 +1,4 @@
-let poemBtnElement = document.querySelector("#poem-btn");
+let poemFormElement = document.querySelector("#poem-form");
 
 const displayAnswer = (response) => {
 
@@ -14,8 +14,9 @@ const makeApiCall = (event) => {
     event.preventDefault();
 
     let poemText = document.querySelector("#poem-text");
-    poemText.innerHTML = "Generating a poem...";
-    
+    poemText.classList.remove("hidden");
+    poemText.innerHTML = `<div class="pending">Generating a poem... ⏳</div>`;
+
     axios
         .get("/.netlify/functions/get-poem")
         .then(displayAnswer)
@@ -24,4 +25,4 @@ const makeApiCall = (event) => {
         });
 };
 
-poemBtnElement.addEventListener("click", makeApiCall);
+poemFormElement.addEventListener("submit", makeApiCall);
