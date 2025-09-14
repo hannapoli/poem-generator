@@ -7,30 +7,41 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>AI poem generator</title>
 </head>
 
 <body>
-    <header>
-        <h1>AI Poem generator</h1>
-    </header>
-    <main>
-        <form>
-            <input type="text" placeholder="Enter the topic of the poem..." autofocus required autocomplete="off" />
-            <input type="submit" id="poem-btn">
-        </form>
-        <div>
-            <h2 name="text" id="poem-text"></h2>
-        </div>
-    </main>
-    <footer>
-        <p>
-            This project was coded by
-            <a href="https://github.com/hannapoli" target="_blank">Hanna Polishchuk</a>. It is open-sourced
-            <a href="https://github.com/hannapoli/poem-generator" target="_blank"> on GitHub</a> and
-            <a href="https://ai-poem-generator-hanna.netlify.app" target="_blank">hosted on Netlify</a>.
-        </p>
-    </footer>
+    <div class="container">
+        <header>
+            <h1>AI Poem Generator</h1>
+        </header>
+        <main>
+            <form>
+                <input type="text" class="prompt-field" placeholder="Enter the topic of the poem..." autofocus required
+                    autocomplete="off" />
+                <input type="submit" class="submit-btn" id="poem-btn">
+            </form>
+            <div>
+                <p name="text" class="generated-poem" id="poem-text">
+                    The poem <br />
+                    will appear here...
+                </p>
+            </div>
+        </main>
+        <footer>
+            <p>
+                This project was made by
+                <a href="https://github.com/hannapoli" target="_blank">Hanna Polishchuk</a>. It is open-sourced
+                <a href="https://github.com/hannapoli/poem-generator" target="_blank"> on GitHub</a> and
+                <a href="https://ai-poem-generator-hanna.netlify.app" target="_blank">hosted on Netlify</a>.
+            </p>
+        </footer>
+    </div>
 </body>
 <script src="./index.js"></script>
 
