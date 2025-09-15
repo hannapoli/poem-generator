@@ -2,6 +2,8 @@
 
 Generates poems based on the provided topic.
 
+![alt text](poem-generator.png)
+
 ### 🚀 Hosted on [Netlify](ai-poem-generator-hanna.netlify.app)
 
 ### ⚙️ Skills used:
